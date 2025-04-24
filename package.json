@@ -1,0 +1,36 @@
+{
+    "name": "@cmmv/tsconfig",
+    "version": "0.0.1",
+    "description": "Base TypeScript configuration for CMMV projects",
+    "main": "tsconfig.base.json",
+    "files": [
+        "tsconfig.base.json",
+        "tsconfig.node.json",
+        "tsconfig.node-esm.json",
+        "tsconfig.web.json",
+        "tsconfig.build-cjs.json",
+        "tsconfig.build-esm.json",
+        "tsconfig.spec.json",
+        "tsconfig.vue.json",
+        "tsconfig.vue-app.json",
+        "tsconfig.vue-node.json",
+        "tsconfig.vue-vitest.json"
+    ],
+    "keywords": [
+        "typescript",
+        "tsconfig",
+        "cmmv",
+        "configuration"
+    ],
+    "author": "Andre Ferreira",
+    "license": "MIT",
+    "peerDependencies": {
+        "typescript": ">=5.0.0"
+    },
+    "dependencies": {
+        "@tsconfig/node22": "^1.0.0"
+    },
+    "publishConfig": {
+        "access": "public"
+    }
+}

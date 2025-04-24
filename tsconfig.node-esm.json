@@ -1,0 +1,48 @@
+{
+    "$schema": "https://json.schemastore.org/tsconfig",
+    "display": "CMMV Node ESM Configuration",
+    "extends": "./tsconfig.base.json",
+    "compilerOptions": {
+        /* Node.js ESM configuration */
+        "target": "ESNext",
+        "module": "NodeNext",
+        "moduleResolution": "NodeNext",
+        "lib": ["ESNext"],
+        "types": ["node"],
+
+        /* Emit configuration */
+        "outDir": "dist",
+        "sourceMap": true,
+        "declaration": true,
+        "incremental": true,
+        "importHelpers": true,
+
+        /* Stricter type checking */
+        "strict": true,
+        "noImplicitAny": false,
+        "strictNullChecks": false,
+        "noImplicitThis": false,
+        "strictBindCallApply": false,
+        "noUnusedLocals": false,
+
+        /* Module resolution */
+        "allowSyntheticDefaultImports": true,
+        "esModuleInterop": true,
+        "resolveJsonModule": true,
+        "skipLibCheck": true,
+        "forceConsistentCasingInFileNames": true,
+
+        /* Decorators support */
+        "experimentalDecorators": true,
+        "emitDecoratorMetadata": true,
+        "useDefineForClassFields": false
+    },
+    "include": ["src/**/*.ts"],
+    "exclude": [
+        "node_modules",
+        "dist",
+        "**/*.spec.ts",
+        "**/*.test.ts",
+        "**/*.browser.ts"
+    ]
+}

@@ -1,0 +1,34 @@
+{
+    "$schema": "https://json.schemastore.org/tsconfig",
+    "display": "CMMV Node Configuration",
+    "extends": "./tsconfig.base.json",
+    "compilerOptions": {
+        /* Node.js specific configuration */
+        "target": "ES2022",
+        "module": "CommonJS",
+        "moduleResolution": "Node",
+        "lib": ["ES2022"],
+        "types": ["node"],
+
+        /* Stricter type checking for backend apps */
+        "strict": true,
+        "strictNullChecks": true,
+        "noImplicitAny": true,
+
+        /* Node-specific additional configs */
+        "sourceMap": true,
+        "inlineSources": true,
+        "sourceRoot": "/",
+
+        /* Exclude browser-specific types */
+        "skipLibCheck": true
+    },
+    "include": ["src/**/*.ts"],
+    "exclude": [
+        "node_modules",
+        "dist",
+        "**/*.spec.ts",
+        "**/*.test.ts",
+        "**/*.browser.ts"
+    ]
+}

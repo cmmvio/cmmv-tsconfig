@@ -1,0 +1,18 @@
+{
+    "$schema": "https://json.schemastore.org/tsconfig",
+    "display": "CMMV Vue Base Configuration",
+    "compilerOptions": {
+        "noImplicitAny": false,
+        "moduleResolution": "node",
+        "module": "ESNext",
+        "target": "ESNext",
+        "jsx": "preserve",
+        "lib": ["ESNext", "DOM", "DOM.Iterable"]
+    },
+    "files": [],
+    "references": [
+        { "path": "./tsconfig.vue-node.json" },
+        { "path": "./tsconfig.vue-app.json" },
+        { "path": "./tsconfig.vue-vitest.json" }
+    ]
+}

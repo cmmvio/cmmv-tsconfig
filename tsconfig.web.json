@@ -1,0 +1,59 @@
+{
+    "$schema": "https://json.schemastore.org/tsconfig",
+    "display": "CMMV Web Configuration",
+    "extends": "./tsconfig.base.json",
+    "compilerOptions": {
+        /* Web specific configuration */
+        "target": "ES2020",
+        "module": "ESNext",
+        "moduleResolution": "Bundler",
+        "lib": ["ESNext", "DOM", "DOM.Iterable"],
+        "jsx": "preserve",
+
+        /* Emit */
+        "declaration": false,
+        "sourceMap": true,
+
+        /* Type checking */
+        "strict": true,
+        "noImplicitAny": true,
+        "strictNullChecks": true,
+
+        /* Module resolution */
+        "allowSyntheticDefaultImports": true,
+        "resolveJsonModule": true,
+        "isolatedModules": true,
+
+        /* Advanced */
+        "skipLibCheck": true,
+        "forceConsistentCasingInFileNames": true,
+        "useDefineForClassFields": true,
+
+        /* Path aliases for web frameworks */
+        "paths": {
+            "@components": ["src/components"],
+            "@components/*": ["src/components/*"],
+            "@pages": ["src/pages"],
+            "@pages/*": ["src/pages/*"],
+            "@hooks": ["src/hooks"],
+            "@hooks/*": ["src/hooks/*"],
+            "@stores": ["src/stores"],
+            "@stores/*": ["src/stores/*"],
+            "@utils": ["src/utils"],
+            "@utils/*": ["src/utils/*"],
+            "@assets": ["src/assets"],
+            "@assets/*": ["src/assets/*"],
+            "@styles": ["src/styles"],
+            "@styles/*": ["src/styles/*"],
+            "@/*": ["src/*"]
+        }
+    },
+    "include": ["src/**/*.ts", "src/**/*.tsx", "src/**/*.vue"],
+    "exclude": [
+        "node_modules",
+        "dist",
+        "**/*.spec.ts",
+        "**/*.test.ts",
+        "**/*.node.ts"
+    ]
+}

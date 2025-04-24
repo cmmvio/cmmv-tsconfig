@@ -1,0 +1,35 @@
+{
+    "$schema": "https://json.schemastore.org/tsconfig",
+    "display": "CMMV ESM Build",
+    "extends": "./tsconfig.node.json",
+    "compilerOptions": {
+        /* Output configuration */
+        "module": "ESNext",
+        "target": "ES2018",
+        "outDir": "./dist/esm",
+        "declaration": true,
+        "declarationDir": "./dist/types",
+
+        /* Build optimizations */
+        "sourceMap": true,
+        "removeComments": false,
+        "importHelpers": true,
+
+        /* Modern module features */
+        "moduleResolution": "NodeNext",
+        "esModuleInterop": true,
+        "allowSyntheticDefaultImports": true,
+
+        /* For library code */
+        "stripInternal": true,
+        "composite": true
+    },
+    "exclude": [
+        "node_modules",
+        "dist",
+        "**/*.spec.ts",
+        "**/*.test.ts",
+        "**/*.stories.ts",
+        "**/*.stories.tsx"
+    ]
+}

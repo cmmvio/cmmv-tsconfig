@@ -1,0 +1,34 @@
+{
+    "$schema": "https://json.schemastore.org/tsconfig",
+    "display": "CMMV CommonJS Build",
+    "extends": "./tsconfig.node.json",
+    "compilerOptions": {
+        /* Output configuration */
+        "module": "CommonJS",
+        "target": "ES2018",
+        "outDir": "./dist/cjs",
+        "declaration": false,
+
+        /* Build optimizations */
+        "sourceMap": true,
+        "removeComments": false,
+        "importHelpers": true,
+
+        /* Module features */
+        "moduleResolution": "Node",
+        "esModuleInterop": true,
+        "allowSyntheticDefaultImports": true,
+
+        /* For library code */
+        "stripInternal": true,
+        "composite": true
+    },
+    "exclude": [
+        "node_modules",
+        "dist",
+        "**/*.spec.ts",
+        "**/*.test.ts",
+        "**/*.stories.ts",
+        "**/*.stories.tsx"
+    ]
+}

@@ -1,0 +1,70 @@
+{
+    "$schema": "https://json.schemastore.org/tsconfig",
+    "display": "CMMV Base Configuration",
+    "compilerOptions": {
+        /* Base typescript configuration */
+        "module": "CommonJS",
+        "moduleResolution": "Node",
+        "target": "ESNext",
+        "lib": ["esnext", "dom"],
+        "types": ["node"],
+
+        /* Emit configuration */
+        "declaration": true,
+        "sourceMap": true,
+        "outDir": "dist",
+        "baseUrl": ".",
+
+        /* Decorators support */
+        "emitDecoratorMetadata": true,
+        "experimentalDecorators": true,
+
+        /* Strict type checking */
+        "strict": false,
+        "strictNullChecks": false,
+        "noImplicitAny": false,
+
+        /* Module resolution */
+        "esModuleInterop": true,
+        "allowSyntheticDefaultImports": true,
+        "resolveJsonModule": true,
+        "skipLibCheck": true,
+
+        /* Path aliases - Can be extended or overridden by projects */
+        "paths": {
+            "@models": ["src/models"],
+            "@models/*": ["src/models/*", ".generated/models/*"],
+            "@modules": ["src/modules"],
+            "@modules/*": ["src/modules/*", ".generated/modules/*"],
+            "@services": ["src/services"],
+            "@services/*": ["src/services/*", ".generated/services/*"],
+            "@controllers": ["src/controllers"],
+            "@controllers/*": ["src/controllers/*", ".generated/controllers/*"],
+            "@contracts": ["src/contracts"],
+            "@contracts/*": ["src/contracts/*", ".generated/contracts/*"],
+            "@entities": ["src/entities"],
+            "@entities/*": ["src/entities/*", ".generated/entities/*"],
+            "@gateways": ["src/gateways"],
+            "@gateways/*": ["src/gateways/*", ".generated/gateways/*"],
+            "@protos": ["src/protos"],
+            "@protos/*": ["src/protos/*", ".generated/protos/*"],
+            "@generated": [".generated"],
+            "@generated/*": [".generated/*"],
+            "@g": [".generated"],
+            "@g/*": [".generated/*"],
+            "@utils": ["src/utils"],
+            "@utils/*": ["src/utils/*"],
+            "@config": ["src/config"],
+            "@config/*": ["src/config/*"],
+            "@/": ["src/"]
+        }
+    },
+    "include": ["src/**/*.ts"],
+    "exclude": [
+        "node_modules",
+        "dist",
+        "src/protos",
+        "**/*.spec.ts",
+        "**/*.test.ts"
+    ]
+}
